@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
+});
+Route::get('/about', function () {
+    return view('pages/about');
+});
+Route::get('/contacts', function () {
+    $data = [
+        'city'=>'Москва',
+        'street'=>'ул. Большая Семёновская',
+        'house'=>'д. 38'
+    ];
+    return view('pages/contacts',['data'=>$data]);  
 });
