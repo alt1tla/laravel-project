@@ -16,9 +16,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('layout');
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\AuthController;
+
+Route::get('/',[MainController::class, 'index']);
+
+Route::get('/article/{img}', function($img){
+    return view("pages/article",['img'=>$img]);
 });
+
 Route::get('/about', function () {
     return view('pages/about');
 });
@@ -30,3 +36,9 @@ Route::get('/contacts', function () {
     ];
     return view('pages/contacts',['data'=>$data]);  
 });
+
+
+//auth
+
+Route::get('/auth/signup',[AuthController::class,'signup']);
+Route::post('/auth/registration',[AuthController::class,'registration']);

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" style=" height: 100%;">
     <head>
         <title>layout</title>
         <!-- Required meta tags -->
@@ -16,7 +16,7 @@
             crossorigin="anonymous"
         />
     </head>
-    <body>
+    <body style=" height: 100%;">
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
@@ -30,36 +30,26 @@
                                 <a class="nav-link" aria-current="page" href="/about">О нас</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/contacts">Контакты</a>
+                                <a class="nav-link" href="/contacts">Контакты</a>
                             </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        <a class="btn btn-outline-success" href="/auth/signup">Регистрация</a>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-            <h1 class="text-center">Приветственная страничка</h1>
-            @yield('content')
+            <h1 class="text-center">Этот контент просматривается на всех страничках</h1>
+            <div style="margin-right:50px; margin-left:50px;">
+                @yield('content')
+            </div>
         </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
+        <footer style=" position: sticky; top: 100vh;">
+        <div class="nav justify-content-end">
+                <p class="nav-link disabled" aria-disabled="true">Герджикова В.Н., 231-322</p>
+            </div>
+        </footer >
+           
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
